@@ -11,6 +11,20 @@ localhost:3453/login
 
 ]
 
+CreateNewAccount
+
+localhost:3453/users/CreateUser
+
+{
+
+    "ResCode": "200",
+    "ResMessage": "Success",
+    "Data": {
+        "NewUserId": "63a8102af373798c3a9daa7e"
+    }
+}
+
+
 GetListAccounts
 
 localhost:3453/users/getList
