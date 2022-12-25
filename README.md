@@ -4,13 +4,12 @@ LoginUser
 
 localhost:3453/login
 
-{  
+[
+ 
+{"UserName":"rezhnn",
+    "Password":"123"   }
 
-"UserName":"rezhnn",
-    "Password":"123"
-    
-    }
-
+]
 
 GetListAccounts
 
