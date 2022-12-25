@@ -1,0 +1,152 @@
+{
+	"info": {
+		"_postman_id": "35808437-2e7e-4c16-b18d-8b0f6f56de91",
+		"name": "api1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "22096477-35808437-2e7e-4c16-b18d-8b0f6f56de91"
+	},
+	"item": [
+		{
+			"name": "account",
+			"id": "5b5d96cf-ba6e-4fcf-8a4d-c92d63ca904e",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3453/users/getList",
+					"host": [
+						"localhost"
+					],
+					"port": "3453",
+					"path": [
+						"users",
+						"getList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post account",
+			"id": "b38131c1-a971-4142-b2c7-d2487a22cd71",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJlemhubiIsInVzZXJJZCI6IjYzOWVkMzFhY2FhOTQ5MTgyMzFhODliNSIsImV4cCI6MTY3MTM2OTU1OH0.9wniLM45E7fnJfdSy4_dCqXIdzf0nDWcizKJFLFrg38",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJlemhubiIsInVzZXJJZCI6IjYzOWVkMzFhY2FhOTQ5MTgyMzFhODliNSIsImV4cCI6MTY3MTQ1NDY0OX0.tP5ozeMlQ-hADnoAmIuX7bj7AnoYkR472XSlaA-dZuk",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"FirstName\":\"reza\",\r\n    \"LastName\":\"hayati\",\r\n    \"BirthDate\":\"2002/10/13\",\r\n    \"Code\":\"002528\",\r\n    \"UserName\":\"rezhnn\",\r\n    \"Password\":\"123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3453/users/CreateUser",
+					"host": [
+						"localhost"
+					],
+					"port": "3453",
+					"path": [
+						"users",
+						"CreateUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"id": "0ea9174e-07fa-4d9b-a0b4-3e0661aa2b40",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \"UserName\":\"rezhnn\",\r\n    \"Password\":\"123\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3453/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3453",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Photoupload",
+			"id": "8679d405-e1ae-471b-9c78-94974179fa22",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "file",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/Administrator/Desktop/file.jfif"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3453/UploadPhoto",
+					"host": [
+						"localhost"
+					],
+					"port": "3453",
+					"path": [
+						"UploadPhoto"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

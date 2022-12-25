@@ -1,0 +1,222 @@
+{
+	"info": {
+		"_postman_id": "85be92ee-b68f-4c32-9fc8-8165d81415e9",
+		"name": "api2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "22096477-85be92ee-b68f-4c32-9fc8-8165d81415e9"
+	},
+	"item": [
+		{
+			"name": "getphoto",
+			"id": "51f08b58-0d91-4097-a19c-7d0dde2fbff3",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:7070/photo/getList",
+					"host": [
+						"localhost"
+					],
+					"port": "7070",
+					"path": [
+						"photo",
+						"getList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "uploadphoto",
+			"id": "476a378f-0c64-4ce1-a231-1d0b55e5cca5",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "file",
+						"value": "file",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/Administrator/Desktop/Algoritm_SourceBaran.Com (2).pdf"
+						},
+						{
+							"key": "Title",
+							"value": "image",
+							"type": "text"
+						},
+						{
+							"key": "Description",
+							"value": "axe 2",
+							"type": "text"
+						},
+						{
+							"key": "ImageName",
+							"value": "file",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:7070/photo/Create",
+					"host": [
+						"localhost"
+					],
+					"port": "7070",
+					"path": [
+						"photo",
+						"Create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "editphoto",
+			"id": "10a5a635-1153-49f9-bfd5-0b651dca5238",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "Title",
+							"value": "image edited",
+							"type": "text"
+						},
+						{
+							"key": "Description",
+							"value": "axe 3 edit shde",
+							"type": "text"
+						},
+						{
+							"key": "ImageName",
+							"value": "fil333",
+							"type": "text"
+						},
+						{
+							"key": "files",
+							"type": "file",
+							"src": "/C:/Users/Administrator/Desktop/Image_created_with_a_mobile_phone.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:7070/photo/Edit/63a18a78b9a93c1c33d15880",
+					"host": [
+						"localhost"
+					],
+					"port": "7070",
+					"path": [
+						"photo",
+						"Edit",
+						"63a18a78b9a93c1c33d15880"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"id": "67b4445a-38c4-4bf2-9914-b4fa0da1db34",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:7070/photo/Delete/63a18ba77923726d527ba671",
+					"host": [
+						"localhost"
+					],
+					"port": "7070",
+					"path": [
+						"photo",
+						"Delete",
+						"63a18ba77923726d527ba671"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getphoto",
+			"id": "c303b800-aa36-4b81-9dc6-09692649b686",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:7070/photo/getList",
+					"host": [
+						"localhost"
+					],
+					"port": "7070",
+					"path": [
+						"photo",
+						"getList"
+					]
+				}
+			},
+			"response": [
+				{
+					"id": "863a2a16-696b-4d7c-8e34-acb97f69ba35",
+					"name": "getphoto",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:7070/photo/getList",
+							"host": [
+								"localhost"
+							],
+							"port": "7070",
+							"path": [
+								"photo",
+								"getList"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 20 Dec 2022 12:50:11 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "694"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"ResCode\": \"200\",\n    \"ResMessage\": \"Success\",\n    \"Data\": [\n        {\n            \"Id\": \"63a15d4d774e4e4ba6a3e0ce\",\n            \"Title\": \"photo1\",\n            \"Description\": \"in axe 1ast\",\n            \"ImageName\": \"\",\n            \"CreateDate\": \"0001-01-01T00:00:00Z\",\n            \"CreatorUserId\": \"\",\n            \"VisitCount\": 0,\n            \"LikeCount\": 0\n        },\n        {\n            \"Id\": \"63a18655a785546e1b66c6d8\",\n            \"Title\": \"image edited\",\n            \"Description\": \"axe 2 edit shde\",\n            \"ImageName\": \"be77c3d5-9362-4d3a-b116-7498df1cfa16.jfif\",\n            \"CreateDate\": \"2022-12-20T10:11:57.288Z\",\n            \"CreatorUserId\": \"\",\n            \"VisitCount\": 0,\n            \"LikeCount\": 0\n        },\n        {\n            \"Id\": \"63a18a78b9a93c1c33d15880\",\n            \"Title\": \"image edited\",\n            \"Description\": \"axe 3 edit shde\",\n            \"ImageName\": \"82926914-5412-4341-ac30-b18f28aec500.jfif\",\n            \"CreateDate\": \"2022-12-20T10:18:23.933Z\",\n            \"CreatorUserId\": \"\",\n            \"VisitCount\": 0,\n            \"LikeCount\": 0\n        }\n    ]\n}"
+				}
+			]
+		}
+	]
+}
